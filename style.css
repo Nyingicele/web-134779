@@ -12,3 +12,9 @@ body{
     color: #333;
 }
 
+/* CONTAINER */
+.container{
+    width: 90%;
+    margin: auto;
+}
+
