@@ -1,137 +1,333 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>UniTrade - Browse Listings</title>
-    <style>
-      table,
-      th,
-      td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 8px;
-      }
-      hr {
-        margin: 15px 0;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse Listings — UniTrade</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Browse Listings</h1>
-
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="listings.html">Browse Listings</a> |
-      <a href="register.html">Register</a> |
-      <a href="contact.html">Contact Us</a>
+    <nav class="navbar">
+      <a href="index.html" class="logo">Uni<span>Trade</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html" class="active">Browse</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="register.html" class="nav-cta nav-links li a">Join Free</a>
     </nav>
 
-    <hr />
+    <div class="page-banner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> › Browse Listings
+      </div>
+      <h1>Browse Listings</h1>
+      <p>2,414 items available from verified students on your campus</p>
+    </div>
 
-    <h2>Search & Filter</h2>
+    <div class="container">
+      <div class="listings-layout">
+       
+        <aside class="sidebar">
+          <div class="sidebar-section">
+            <h3>Category</h3>
+            <label><input type="checkbox" checked /> Textbooks (482)</label>
+            <label><input type="checkbox" checked /> Electronics (219)</label>
+            <label><input type="checkbox" /> Furniture (134)</label>
+            <label><input type="checkbox" /> Lab &amp; Science (91)</label>
+            <label><input type="checkbox" /> Clothing (310)</label>
+            <label><input type="checkbox" /> Gaming (76)</label>
+            <label><input type="checkbox" /> Transport (44)</label>
+            <label><input type="checkbox" /> Art &amp; Supplies (58)</label>
+          </div>
+          <div class="sidebar-section">
+            <h3>Condition</h3>
+            <label><input type="checkbox" checked /> Like New</label>
+            <label><input type="checkbox" checked /> Good</label>
+            <label><input type="checkbox" /> Fair</label>
+            <label><input type="checkbox" /> For Parts</label>
+          </div>
+          <div class="sidebar-section">
+            <h3>Campus</h3>
+            <select>
+              <option>All Campuses</option>
+              <option>Main Campus</option>
+              <option>Chiromo Campus</option>
+              <option>Lower Kabete</option>
+              <option>Parklands Campus</option>
+            </select>
+          </div>
+          <div class="sidebar-section">
+            <h3>Listing Type</h3>
+            <label><input type="checkbox" checked /> For Sale</label>
+            <label><input type="checkbox" /> For Swap</label>
+            <label><input type="checkbox" /> Free</label>
+          </div>
+          <div class="sidebar-section">
+            <button class="sidebar-btn">Apply Filters</button>
+          </div>
+        </aside>
 
-    <form>
-      <label>Search:</label>
-      <input type="text" placeholder="e.g. textbook, calculator" />
-      <input type="submit" value="Go" />
-    </form>
+        
+        <main class="listings-main">
+          <div class="search-bar">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search listings e.g. Calculus textbook, Dell laptop..."
+            />
+            <button onclick="filterListings()">Search</button>
+          </div>
 
-    <br />
+          <div class="listings-toolbar">
+            <div class="toolbar-info">
+              Showing <strong>1–9</strong> of <strong>701</strong> results
+            </div>
+            <div class="toolbar-sort">
+              Sort by:
+              <select>
+                <option>Newest First</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Most Popular</option>
+              </select>
+            </div>
+          </div>
 
-    <fieldset>
-      <legend>Category</legend>
-      <label><input type="checkbox" /> Textbooks</label><br />
-      <label><input type="checkbox" /> Electronics</label><br />
-      <label><input type="checkbox" /> Furniture</label><br />
-      <label><input type="checkbox" /> Clothing</label>
-    </fieldset>
+          <div class="listings-grid" id="listingsGrid">
+            <div class="listing-card">
+              <div class="listing-img">📖</div>
+              <div class="listing-body">
+                <span class="listing-tag"
+                  >Textbooks <span class="badge badge-new">NEW</span></span
+                >
+                <div class="listing-title">
+                  Introduction to Psychology — 4th Ed.
+                </div>
+                <div class="listing-meta">📍 Chiromo · Like new · 2h ago</div>
+                <div class="listing-footer">
+                  <div class="listing-price">
+                    Ksh 600 <small>Ksh 900</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <br />
+            <div class="listing-card">
+              <div class="listing-img">🎧</div>
+              <div class="listing-body">
+                <span class="listing-tag"
+                  >Electronics <span class="badge badge-hot">🔥 HOT</span></span
+                >
+                <div class="listing-title">Sony WH-1000XM4 Headphones</div>
+                <div class="listing-meta">📍 Main Campus · Good · 4h ago</div>
+                <div class="listing-footer">
+                  <div class="listing-price">
+                    Ksh 8,500 <small>Ksh 12,000</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <label>Sort by:</label>
-    <select>
-      <option>Newest First</option>
-      <option>Price Low to High</option>
-      <option>Price High to Low</option>
-    </select>
+            <div class="listing-card">
+              <div class="listing-img">💻</div>
+              <div class="listing-body">
+                <span class="listing-tag">Electronics</span>
+                <div class="listing-title">
+                  Dell Inspiron 15" — i5, 8GB, SSD
+                </div>
+                <div class="listing-meta">📍 Main Campus · Good · 6h ago</div>
+                <div class="listing-footer">
+                  <div class="listing-price">
+                    Ksh 28,000 <small>Ksh 45,000</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <br /><br />
-    <input type="submit" value="Apply Filters" />
+            <div class="listing-card">
+              <div class="listing-img">🪑</div>
+              <div class="listing-body">
+                <span class="listing-tag">Furniture</span>
+                <div class="listing-title">
+                  Study Desk + Adjustable Chair Set
+                </div>
+                <div class="listing-meta">📍 Halls · Fair · 1 day ago</div>
+                <div class="listing-footer">
+                  <div class="listing-price">Ksh 3,500</div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <hr />
+            <div class="listing-card">
+              <div class="listing-img">🔬</div>
+              <div class="listing-body">
+                <span class="listing-tag">Lab &amp; Science</span>
+                <div class="listing-title">
+                  Casio fx-991EX Scientific Calculator
+                </div>
+                <div class="listing-meta">
+                  📍 Chiromo · Like new · 1 day ago
+                </div>
+                <div class="listing-footer">
+                  <div class="listing-price">
+                    Ksh 1,800 <small>Ksh 3,200</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <h2>Available Items</h2>
+            <div class="listing-card">
+              <div class="listing-img">📐</div>
+              <div class="listing-body">
+                <span class="listing-tag"
+                  >Textbooks <span class="badge badge-new">NEW</span></span
+                >
+                <div class="listing-title">
+                  Engineering Mathematics — Stroud
+                </div>
+                <div class="listing-meta">
+                  📍 Main Campus · Good · 2 days ago
+                </div>
+                <div class="listing-footer">
+                  <div class="listing-price">
+                    Ksh 1,200 <small>Ksh 2,000</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <!-- Item 1 -->
-    <article>
-      <h3>Laptop stand</h3>
-      <p><b>Condition:</b> Like new | <b>Campus:</b> Main Campus</p>
-      <p><b>Price:</b> Ksh 600 <del>Ksh 900</del></p>
-      <a href="#">View Details →</a>
-    </article>
+            <div class="listing-card">
+              <div class="listing-img">🪴</div>
+              <div class="listing-body">
+                <span class="listing-tag">Room &amp; Living</span>
+                <div class="listing-title">Mini Desk Plants — 3-Pack</div>
+                <div class="listing-meta">📍 Halls · Like new · 3 days ago</div>
+                <div class="listing-footer">
+                  <div class="listing-price">Ksh 350</div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <hr />
+            <div class="listing-card">
+              <div class="listing-img">🚲</div>
+              <div class="listing-body">
+                <span class="listing-tag">Transport</span>
+                <div class="listing-title">Campus Hybrid Bicycle — 2022</div>
+                <div class="listing-meta">📍 Lower Kabete · Good · Swap OK</div>
+                <div class="listing-footer">
+                  <div class="listing-price">Ksh 4,200</div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
 
-    <!-- Item 2 -->
-    <article>
-      <h3>🎧 Sony Headphones</h3>
-      <p><b>Condition:</b> Good | <b>Campus:</b> ole sangale</p>
-      <p><b>Price:</b> Ksh 8,500 <del>Ksh 12,000</del></p>
-      <a href="#">View Details →</a>
-    </article>
+            <div class="listing-card">
+              <div class="listing-img">🎮</div>
+              <div class="listing-body">
+                <span class="listing-tag">Gaming</span>
+                <div class="listing-title">PS4 Controller — Original</div>
+                <div class="listing-meta">📍 Parklands · Good · 5 days ago</div>
+                <div class="listing-footer">
+                  <div class="listing-price">
+                    Ksh 2,500 <small>Ksh 4,500</small>
+                  </div>
+                  <a
+                    href="#"
+                    class="btn btn-primary"
+                    style="padding: 6px 14px; font-size: 12px"
+                    >View</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
 
-    <hr />
+          <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">›</a>
+          </div>
+        </main>
+      </div>
+    </div>
 
-    <!-- Item 3 -->
-    <article>
-      <h3>💻 Dell Laptop - i5, 8GB RAM</h3>
-      <p><b>Condition:</b> Good | <b>Campus:</b> Main Campus</p>
-      <p><b>Price:</b> Ksh 28,000 <del>Ksh 45,000</del></p>
-      <a href="#">View Details →</a>
-    </article>
-
-    <hr />
-
-    <!-- Item 4 -->
-    <article>
-      <h3>Study Desk + Chair Set</h3>
-      <p><b>Condition:</b> Fair | <b>Campus:</b> Halls of Residence</p>
-      <p><b>Price:</b> Ksh 3,500</p>
-      <a href="#">View Details →</a>
-    </article>
-
-    <hr />
-
-    <!-- Item 5 -->
-    <article>
-      <h3>Casio Scientific Calculator</h3>
-      <p><b>Condition:</b> Like new | <b>Campus:</b> Ole Sangale</p>
-      <p><b>Price:</b> Ksh 1,800 <del>Ksh 3,200</del></p>
-      <a href="#">View Details →</a>
-    </article>
-
-    <hr />
-
-    <!-- Item 6 -->
-    <article>
-      <h3>plushies</h3>
-      <p><b>Condition:</b> Good | <b>Campus:</b> Ole Sangale</p>
-      <p><b>Price:</b> Ksh 1,200 <del>Ksh 2,000</del></p>
-      <a href="#">View Details →</a>
-    </article>
-
-    <hr />
-
-    <h3>Showing 1-6 of 12 results</h3>
-
-    <p><a href="#">1</a> | <a href="#">2</a> | <a href="#">Next →</a></p>
-
-    <hr />
-
-    <footer>
-      <p>
-        &copy; 2026 UniTrade | <a href="index.html">Home</a> |
-        <a href="contact.html">Contact</a>
-      </p>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Uni<span>Trade</span></span>
+          <p>
+            The student-to-student exchange platform built for university
+            communities.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Browse Listings</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 UniTrade &mdash; 
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

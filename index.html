@@ -3,190 +3,359 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniTrade</title>
+    <title>UniTrade — Student Exchange Platform</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html"><strong>UniTrade</strong></a>
-      &nbsp;|&nbsp;
-      <a href="index.html">Home</a> |
-      <a href="listings.html">Browse Listings</a> |
-      <a href="register.html">Register</a> |
-      <a href="contact.html">Contact Us</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo">Uni<span>Trade</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="listings.html">Browse</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="listings.html" class="nav-cta">Browse Now</a>
     </nav>
 
-    <hr />
+    <!-- Welcome banner will appear here via JavaScript -->
+    <div id="welcome-banner"></div>
 
-    <header>
-      <p><em>University Student Exchange Platform</em></p>
-      <h1>Trade Smart. Study Harder.</h1>
-      <p>
-        A centralized web platform that enables secure and convenient exchange
-        of goods and services among university students be it textbooks,
-        electronics, furniture, and more.
-      </p>
-      <a href="listings.html">Browse here</a>
-      &nbsp;
-      <a href="register.html">Join UniTrade</a>
-    </header>
-
-    <hr />
-
-    <section>
-      <h2>Platform at a Glance</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Active Listings</th>
-            <th>Verified Students</th>
-            <th>Satisfaction Rate</th>
-            <th>Platform Fees</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>2,400+</td>
-            <td>840</td>
-            <td>95%</td>
-            <td>Ksh 0</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <hr />
-
-    <section>
-      <h2>How UniTrade Works</h2>
-      <ol>
-        <li>
-          <h3>Post a product</h3>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge">🎓 University Student Exchange Platform</div>
+          <h1>Trade Smart.<br /><em>Study Harder.</em></h1>
           <p>
-            Describe your item, set a price or swap offer, and publish in under
-            two minutes.
+            A centralized web platform that enables secure and convenient
+            exchange of goods and services among university students —
+            textbooks, electronics, furniture, and more.
           </p>
-        </li>
-        <li>
-          <h3>Connect with a Student</h3>
-          <p>
-            Chat directly with verified students on your campus safely and
-            easily.
-          </p>
-        </li>
-        <li>
-          <h3>Meet &amp; Exchange</h3>
-          <p>
-            Agree on a campus pickup spot, complete the exchange, and leave a
-            review.
-          </p>
-        </li>
-      </ol>
+          <div class="hero-buttons">
+            <a href="listings.html" class="btn btn-amber">Browse Listings</a>
+            <a href="register.html" class="btn btn-outline">Join UniTrade</a>
+          </div>
+        </div>
+        <!-- Quick preview cards -->
+        <div class="hero-visual">
+          <div class="listing-stack">
+            <div class="mini-card">
+              <div class="mini-card-icon">📚</div>
+              <div class="mini-card-info">
+                <div class="mini-card-title">Introduction to Psychology</div>
+                <div class="mini-card-sub">Like new · Chiromo Campus</div>
+              </div>
+              <div class="mini-card-price">Ksh 600</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon">💻</div>
+              <div class="mini-card-info">
+                <div class="mini-card-title">Dell Inspiron 15" Laptop</div>
+                <div class="mini-card-sub">Good · Main Campus</div>
+              </div>
+              <div class="mini-card-price">Ksh 28,000</div>
+            </div>
+            <div class="mini-card">
+              <div class="mini-card-icon">🚲</div>
+              <div class="mini-card-info">
+                <div class="mini-card-title">Campus Hybrid Bicycle</div>
+                <div class="mini-card-sub">Good · Lower Kabete</div>
+              </div>
+              <div class="mini-card-price">Ksh 4,200</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr />
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <span class="stat-num">2,400+</span>
+          <span class="stat-label">Active Listings</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">840</span>
+          <span class="stat-label">Verified Students</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">95%</span>
+          <span class="stat-label">Satisfaction Rate</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Ksh 0</span>
+          <span class="stat-label">Platform Fees</span>
+        </div>
+      </div>
+    </div>
 
-    <section>
-      <h2>Browse by Category</h2>
-      <ul>
-        <li><a href="listings.html"> Textbooks</a> — 482 listings</li>
-        <li><a href="listings.html"> Electronics</a> — 219 listings</li>
-        <li><a href="listings.html"> Furniture</a> — 134 listings</li>
-        <li><a href="listings.html"> Clothing</a> — 310 listings</li>
-        <li><a href="listings.html"> Gaming</a> — 76 listings</li>
-        <li><a href="listings.html"> Transport</a> — 44 listings</li>
-        <li><a href="listings.html"> Art &amp; Supplies</a> — 58 listings</li>
-      </ul>
+    <!-- How It Works -->
+    <section class="section">
+      <div class="container">
+        <div class="section-label">How It Works</div>
+        <h2 class="section-title">Exchange in three steps</h2>
+        <p class="section-desc">
+          No complicated processes — post, connect, and exchange with verified
+          fellow students.
+        </p>
+        <div class="how-grid">
+          <div class="how-card">
+            <span class="how-num">01</span>
+            <span class="how-icon">📋</span>
+            <h3>Post a Listing</h3>
+            <p>
+              Describe your item, set a price or swap offer, and publish in
+              under two minutes.
+            </p>
+          </div>
+          <div class="how-card">
+            <span class="how-num">02</span>
+            <span class="how-icon">💬</span>
+            <h3>Connect with a Student</h3>
+            <p>
+              Chat directly with verified students on your campus — safely and
+              easily.
+            </p>
+          </div>
+          <div class="how-card">
+            <span class="how-num">03</span>
+            <span class="how-icon">🤝</span>
+            <h3>Meet &amp; Exchange</h3>
+            <p>
+              Agree on a campus pickup spot, complete the exchange, and leave a
+              review.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr />
+    <!-- Categories -->
+    <div class="categories-section">
+      <div class="section container">
+        <div class="section-label">Browse by Category</div>
+        <h2 class="section-title">What are you looking for?</h2>
+        <div class="cat-grid">
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">📚</span>
+            <span class="cat-name">Textbooks</span>
+            <span class="cat-count">482 listings</span>
+          </a>
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">💻</span>
+            <span class="cat-name">Electronics</span>
+            <span class="cat-count">219 listings</span>
+          </a>
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">🪑</span>
+            <span class="cat-name">Furniture</span>
+            <span class="cat-count">134 listings</span>
+          </a>
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">🔬</span>
+            <span class="cat-name">Lab &amp; Science</span>
+            <span class="cat-count">91 listings</span>
+          </a>
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">👕</span>
+            <span class="cat-name">Clothing</span>
+            <span class="cat-count">310 listings</span>
+          </a>
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">🎮</span>
+            <span class="cat-name">Gaming</span>
+            <span class="cat-count">76 listings</span>
+          </a>
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">🚲</span>
+            <span class="cat-name">Transport</span>
+            <span class="cat-count">44 listings</span>
+          </a>
+          <a href="listings.html" class="cat-card">
+            <span class="cat-icon">🎨</span>
+            <span class="cat-name">Art &amp; Supplies</span>
+            <span class="cat-count">58 listings</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <section>
-      <h2>Recent Listings</h2>
-
-      <article>
-        <h3>Introduction to Psychology — 4th Edition</h3>
-        <p>
-          <strong>Category:</strong> Textbooks &nbsp;|&nbsp;
-          <strong>Condition:</strong> Like new &nbsp;|&nbsp;
-          <strong>Campus:</strong> Chiromo
-        </p>
-        <p><strong>Price:</strong> Ksh 600 &nbsp; <del>Ksh 900</del></p>
-        <a href="listings.html">View Listing</a>
-      </article>
-
-      <br />
-
-      <article>
-        <h3>Sony WH-1000XM4 Headphones</h3>
-        <p>
-          <strong>Category:</strong> Electronics &nbsp;|&nbsp;
-          <strong>Condition:</strong> Good &nbsp;|&nbsp;
-          <strong>Campus:</strong> Main Campus
-        </p>
-        <p><strong>Price:</strong> Ksh 8,500 &nbsp; <del>Ksh 12,000</del></p>
-        <a href="listings.html">View Listing</a>
-      </article>
-
-      <br />
-
-      <article>
-        <h3>Campus Hybrid Bicycle — 2022</h3>
-        <p>
-          <strong>Category:</strong> Transport &nbsp;|&nbsp;
-          <strong>Condition:</strong> Good &nbsp;|&nbsp;
-          <strong>Campus:</strong> Lower Kabete
-        </p>
-        <p>
-          <strong>Price:</strong> Ksh 4,200 &nbsp; <em>Swap also welcome</em>
-        </p>
-        <a href="listings.html">View Listing</a>
-      </article>
-
-      <br />
-      <a href="listings.html">View All Listings &rarr;</a>
+    <!-- Recent Listings -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-label">Fresh on the Platform</div>
+            <h2 class="section-title">Recent listings</h2>
+          </div>
+          <a href="listings.html" class="btn btn-outline">View All</a>
+        </div>
+        <div class="listings-grid">
+          <div class="listing-card">
+            <div class="listing-img">📖</div>
+            <div class="listing-body">
+              <span class="listing-tag">
+                Textbooks <span class="badge badge-new">NEW</span>
+              </span>
+              <div class="listing-title">
+                Introduction to Psychology — 4th Ed.
+              </div>
+              <div class="listing-meta">📍 Chiromo Campus · Like new</div>
+              <div class="listing-footer">
+                <div class="listing-price">Ksh 600 <small>Ksh 900</small></div>
+                <a
+                  href="listings.html"
+                  class="btn btn-primary"
+                  style="padding: 6px 14px; font-size: 12px"
+                >
+                  View
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="listing-card">
+            <div class="listing-img">🎧</div>
+            <div class="listing-body">
+              <span class="listing-tag">
+                Electronics <span class="badge badge-hot">🔥 HOT</span>
+              </span>
+              <div class="listing-title">Sony WH-1000XM4 Headphones</div>
+              <div class="listing-meta">📍 Main Campus · Good condition</div>
+              <div class="listing-footer">
+                <div class="listing-price">
+                  Ksh 8,500 <small>Ksh 12,000</small>
+                </div>
+                <a
+                  href="listings.html"
+                  class="btn btn-primary"
+                  style="padding: 6px 14px; font-size: 12px"
+                >
+                  View
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="listing-card">
+            <div class="listing-img">🚲</div>
+            <div class="listing-body">
+              <span class="listing-tag">Transport</span>
+              <div class="listing-title">Campus Hybrid Bicycle — 2022</div>
+              <div class="listing-meta">📍 Lower Kabete · Swap OK</div>
+              <div class="listing-footer">
+                <div class="listing-price">Ksh 4,200</div>
+                <a
+                  href="listings.html"
+                  class="btn btn-primary"
+                  style="padding: 6px 14px; font-size: 12px"
+                >
+                  View
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr />
-
-    <section>
-      <h2>Why Students Trust UniTrade</h2>
-      <dl>
-        <dt>Verified Students Only</dt>
-        <dd>
-          Sign up with your official university email. No outsiders, no spam.
-        </dd>
-
-        <dt>Zero Platform Fees</dt>
-        <dd>100% of every sale goes to you. UniTrade takes nothing.</dd>
-
-        <dt>Safe Messaging</dt>
-        <dd>
-          Negotiate within the platform without sharing your personal phone
-          number.
-        </dd>
-
-        <dt>Peer Reviews</dt>
-        <dd>
-          Rate buyers and sellers after every exchange to keep the community
-          accountable.
-        </dd>
-      </dl>
+    <!-- Trust Section -->
+    <section class="trust-section section">
+      <div class="container">
+        <div class="section-label" style="color: var(--amber)">
+          Why UniTrade
+        </div>
+        <h2 class="section-title" style="color: #fff">
+          Built around student trust
+        </h2>
+        <p class="section-desc" style="color: rgba(255, 255, 255, 0.65)">
+          Every feature is designed to keep your campus exchange safe and
+          transparent.
+        </p>
+        <div class="trust-grid">
+          <div class="trust-card">
+            <span class="trust-icon">🛡️</span>
+            <h3>Verified Students Only</h3>
+            <p>
+              Sign up with your official university email. No outsiders, no spam
+              accounts.
+            </p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon">💰</span>
+            <h3>Zero Platform Fees</h3>
+            <p>
+              100% of every sale goes directly to you. UniTrade takes nothing —
+              ever.
+            </p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon">💬</span>
+            <h3>Safe Messaging</h3>
+            <p>
+              Negotiate within the platform without sharing your personal phone
+              number.
+            </p>
+          </div>
+          <div class="trust-card">
+            <span class="trust-icon">⭐</span>
+            <h3>Peer Reviews</h3>
+            <p>
+              Rate buyers and sellers after every exchange to keep the community
+              accountable.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <hr />
-
-    <section>
+    <!-- Mission Statement -->
+    <div class="mission-banner">
       <blockquote>
         "A centralized platform that enables secure and convenient exchange of
         goods and services among university students."
       </blockquote>
-      <cite>— The UniTrade Mission</cite>
-    </section>
+      — The UniTrade Mission
+    </div>
 
-    <hr />
-
-    <footer>
-      <p>&copy; 2026 UniTrade &mdash;</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Uni<span>Trade</span></span>
+          <p>
+            The student-to-student exchange platform built for university
+            communities. Buy, sell, and swap with peers you can trust.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Browse Listings</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="listings.html">Textbooks</a></li>
+            <li><a href="listings.html">Electronics</a></li>
+            <li><a href="listings.html">Furniture</a></li>
+            <li><a href="listings.html">Lab &amp; Science</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 UniTrade &mdash; Web Development Assignment &mdash; Built
+        with HTML, CSS &amp; JavaScript
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

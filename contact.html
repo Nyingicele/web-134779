@@ -1,114 +1,227 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>UniTrade - Contact Us</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-            border-collapse: collapse;
-            padding: 8px;
-        }
-        hr {
-            margin: 15px 0;
-        }
-    </style>
-</head>
-<body>
-
-    <h1> Contact UniTrade</h1>
-
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="listings.html">Browse Listings</a> |
-        <a href="register.html">Register</a> |
-        <a href="contact.html">Contact Us</a>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us — UniTrade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="index.html" class="logo">Uni<span>Trade</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="listings.html">Browse</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <a href="register.html" class="nav-cta">Join Free</a>
     </nav>
 
-    <hr>
+    <div class="page-banner">
+      <div class="breadcrumb"><a href="index.html">Home</a> › Contact Us</div>
+      <h1>Get in Touch</h1>
+      <p>Questions, reports, or feedback — we're here to help</p>
+    </div>
 
-    <h2>Get in Touch</h2>
-    <p>Questions, reports, or feedback? We're here to help.</p>
+    <div class="container">
+      <div class="form-layout">
+        <!-- Contact Form -->
+        <div class="form-main">
+          <div class="form-card">
+            <h2>Send us a message</h2>
+            <p class="subtitle">
+              We typically respond within 24 hours on weekdays.
+            </p>
 
-    <hr>
+            <form
+              id="contactForm"
+              action="contact.php"
+              method="POST"
+              novalidate
+            >
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="c_name">Your Name *</label>
+                  <input
+                    type="text"
+                    id="c_name"
+                    name="c_name"
+                    placeholder="Full name"
+                  />
+                  <div class="error-msg" id="c_name-error">
+                    Please enter your name.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="c_email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="c_email"
+                    name="c_email"
+                    placeholder="your@email.com"
+                  />
+                  <div class="error-msg" id="c_email-error">
+                    Please enter a valid email address.
+                  </div>
+                </div>
+              </div>
 
-    <h3>Contact Information</h3>
-    <table>
-        <tr>
-            <th>Channel</th>
-            <th>Details</th>
-        </tr>
-        <tr>
-            <td>Email</th>
-            <td>hello@unitrade.co.ke</th>
-        </tr>
-        <tr>
-            <td>Support</th>
-            <td>support@unitrade.co.ke</th>
-        </tr>
-        <tr>
-            <td>Location</th>
-            <td>Nairobi, Kenya</th>
-        </tr>
-    </table>
+              <div class="form-group">
+                <label for="c_university">Your University (optional)</label>
+                <select id="c_university" name="c_university">
+                  <option value="">— Select if applicable —</option>
+                  <option>University of Nairobi</option>
+                  <option>Kenyatta University</option>
+                  <option>Strathmore University</option>
+                  <option>USIU-Africa</option>
+                  <option>Daystar University</option>
+                  <option>Mount Kenya University</option>
+                  <option>Not a student</option>
+                </select>
+              </div>
 
-    <hr>
+              <div class="form-group">
+                <label for="c_reason">Reason for Contact *</label>
+                <select id="c_reason" name="c_reason">
+                  <option value="">— Select a topic —</option>
+                  <option>General enquiry</option>
+                  <option>Report a listing or user</option>
+                  <option>Account problem</option>
+                  <option>Transaction issue</option>
+                  <option>Feedback or suggestion</option>
+                  <option>Press or partnership</option>
+                  <option>Other</option>
+                </select>
+                <div class="error-msg" id="c_reason-error">
+                  Please select a reason for contact.
+                </div>
+              </div>
 
-    <h3>Send Us a Message</h3>
+              <div class="form-group">
+                <label for="c_subject">Subject *</label>
+                <input
+                  type="text"
+                  id="c_subject"
+                  name="c_subject"
+                  placeholder="Brief summary of your message"
+                />
+                <div class="error-msg" id="c_subject-error">
+                  Please enter a subject.
+                </div>
+              </div>
 
-    <form>
-        <label>Your Name *</label><br>
-        <input type="text" placeholder="Full name" size="35"><br><br>
+              <div class="form-group">
+                <label for="c_message">Message *</label>
+                <textarea
+                  id="c_message"
+                  name="c_message"
+                  rows="5"
+                  placeholder="Describe your issue or question in detail."
+                ></textarea>
+                <div class="error-msg" id="c_message-error">
+                  Please enter your message.
+                </div>
+              </div>
 
-        <label>Email Address *</label><br>
-        <input type="email" placeholder="your@email.com" size="35"><br><br>
+              <button type="submit" class="submit-btn">Send Message →</button>
+            </form>
+          </div>
+        </div>
 
-        <label>Subject *</label><br>
-        <input type="text" placeholder="Brief summary" size="45"><br><br>
+        <div class="form-side">
+          <!-- Contact Info -->
+          <div class="form-card" style="margin-bottom: 1.2rem">
+            <h2 style="font-size: 1.2rem; margin-bottom: 1.2rem">
+              Contact Information
+            </h2>
+            <table class="contact-table">
+              <tr>
+                <th>Channel</th>
+                <th>Details</th>
+              </tr>
+              <tr>
+                <td>📧 General</td>
+                <td>hello@unitrade.co.ke</td>
+              </tr>
+              <tr>
+                <td>🛠️ Support</td>
+                <td>support@unitrade.co.ke</td>
+              </tr>
+              <tr>
+                <td>🚨 Urgent</td>
+                <td>report@unitrade.co.ke</td>
+              </tr>
+              <tr>
+                <td>📍 Based at</td>
+                <td>University of Nairobi</td>
+              </tr>
+              <tr>
+                <td>🕐 Response</td>
+                <td>Within 24 hrs (weekdays)</td>
+              </tr>
+            </table>
+          </div>
 
-        <label>Message *</label><br>
-        <textarea rows="5" cols="45" placeholder="Describe your question or issue..."></textarea><br><br>
+          <div class="form-card">
+            <h2 style="font-size: 1.2rem; margin-bottom: 1.2rem">FAQ</h2>
+            <dl class="faq-list">
+              <div class="faq-item">
+                <dt>Is UniTrade free?</dt>
+                <dd>Yes — 100% free. No commission, no listing fees, ever.</dd>
+              </div>
+              <div class="faq-item">
+                <dt>Who can join?</dt>
+                <dd>
+                  Any currently enrolled university student with an
+                  institutional email.
+                </dd>
+              </div>
+              <div class="faq-item">
+                <dt>Can I swap instead of sell?</dt>
+                <dd>
+                  Yes. Mark any listing as "Swap Available" and negotiate
+                  directly.
+                </dd>
+              </div>
+              <div class="faq-item">
+                <dt>How are students verified?</dt>
+                <dd>
+                  Via your institutional email address confirmed at
+                  registration.
+                </dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <input type="submit" value="Send Message">
-        <input type="reset" value="Clear Form">
-    </form>
-
-    <hr>
-
-    <h3>Frequently Asked Questions</h3>
-
-    <p><b>Is UniTrade free?</b><br>Yes, completely free for all students.</p>
-
-    <p><b>Who can join?</b><br>Any university student with a valid student email.</p>
-
-    <p><b>How do I report an issue?</b><br>Email report@unitrade.co.ke or use the form above.</p>
-
-    <p><b>Can I swap items?</b><br>Yes! Mark your listing as "Swap Available".</p>
-
-    <hr>
-
-    <h3>Behind UniTrade</h3>
-    <p>Built by students, for students - Web Development Class Project</p>
-
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Role</th>
-        </tr>
-        <tr>
-            <td>Amina Ochieng</th>
-            <td>Founder & Developer</th>
-        </tr>
-        <tr>
-            <td>Brian Mwangi</th>
-            <td>UI Designer</th>
-        </tr>
-    </table>
-
-    <hr>
-
-    <footer>
-        <p>&copy; 2026 UniTrade | <a href="index.html">Home</a> | <a href="register.html">Register</a></p>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-logo">Uni<span>Trade</span></span>
+          <p>
+            The student-to-student exchange platform built for university
+            communities.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Browse Listings</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">&copy; 2026 UniTrade &mdash;</div>
     </footer>
 
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
